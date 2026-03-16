@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>El Parlamento - Zona Interactiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="telegram.js"></script>
+<script src="app.js"></script> </body>
+
+<body>
+
+    <div class="contenedor">
+        <h1>🏛️ El Parlamento</h1>
+        <p class="subtitulo" style="margin-bottom: 5px;">Toma el control de tu noche.</p>
+        <p style="font-size: 11px; color: var(--accent-orange); cursor: pointer; text-decoration: underline; margin-bottom: 25px;" onclick="resetearMesa()">¿Te has equivocado de mesa? Cámbiala aquí.</p>
+
+        <div>
+            <h3><span class="icon">🍺</span> Consejero de Bebidas</h3>
+            <p style="font-size: 13px; color: #888; margin-bottom: 10px;">¿No sabes qué pedir? Deja que te asesoremos.</p>
+            <a href="consejero.html" class="boton" style="text-align: center; display: block; box-sizing: border-box;">Encontrar mi copa ideal</a>
+        </div>
+
+        <div>
+            <h3><span class="icon">🎸</span> La Voz de las Jams</h3>
+            <p style="font-size: 13px; color: #888; margin-bottom: 10px;">Si la banda lo está rompiendo, ¡házselo saber!</p>
+            <a href="jams.html" class="boton boton-oscuro" style="text-align: center; display: block; box-sizing: border-box;">🔥 ¡Menudo temazo!</a>
+        </div>
+
+        <div>
+            <h3><span class="icon">🎵</span> Pide un Temazo</h3>
+            <div id="caja-musica" style="margin-top: 10px;">
+                <input type="text" id="input-cancion" placeholder="Ej: Highway to Hell - AC/DC" class="input-texto">
+                <button class="boton" onclick="enviarCancion()">Enviar al DJ</button>
+            </div>
+        </div>
+
+        <div>
+            <h3><span class="icon">🛎️</span> Atención en mesa</h3>
+            <button class="boton boton-verde" onclick="avisarCamarero('pedido')">Llamar al camarero</button>
+            <button class="boton boton-verde" onclick="avisarCamarero('cuenta')">Pedir la cuenta</button>
+        </div>
+
+        <div>
+            <h3><span class="icon">📋</span> Kit de Supervivencia</h3>
+            
+            <a href="carta.html" class="boton boton-oscuro" style="margin-bottom: 15px;">Ver Carta Digital</a>
+            
+            <div class="datos-wifi">
+                <p style="margin: 5px 0;">Red Wi-Fi: <strong>Parlamento_VIP</strong></p>
+                <p style="display:none;" id="clave-wifi">RockParlamento2026</p>
+            </div>
+            <button class="boton boton-oscuro" onclick="copiarClaveWifi()">Copiar Contraseña</button>
+            <p id="mensaje-copiado" style="color: #2ecc71; font-size: 13px; display: none; margin-top: 5px;">¡Clave copiada con éxito!</p>
+
+            <h3 style="margin-top: 25px;"><span class="icon">📸</span> ¡Síguenos!</h3>
+            <a href="https://instagram.com/elparlamento_alicante" target="_blank" class="boton boton-oscuro">@ElParlamento_Pub</a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

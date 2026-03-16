@@ -1,0 +1,269 @@
+:root {
+    --accent-orange: #FE9400; 
+    --accent-orange-hover: #e67e22;
+    --accent-green: #00C853; 
+    --accent-green-hover: #00b34a;
+    --accent-dark-btn: #393C45; 
+    --bg-body: #101115; 
+    --bg-card: #16171B; 
+    --text-heading: #BDBDBD; 
+    --text-body: #E0E3EB; 
+    --shadow-card: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-body);
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    -webkit-overflow-scrolling: touch; 
+}
+
+.contenedor {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(22, 23, 27, 0.8);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+h1 { 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(135deg, #FE9400 0%, #ffc163 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0; 
+    font-size: 26px;
+}
+
+p.subtitulo { color: var(--text-heading); font-size: 14px; margin-bottom: 30px; font-weight: 400;}
+
+h3 { 
+    color: var(--text-body); 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    padding-bottom: 12px; 
+    margin-top: 35px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 span.icon { margin-right: 8px; font-size: 1.2em;}
+
+.boton {
+    display: block;
+    background: linear-gradient(135deg, #FE9400 0%, #f39c12 100%);
+    color: #1a1a1a;
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 12px auto;
+    width: 90%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(254, 148, 0, 0.3);
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+.boton:active { transform: scale(0.98); box-shadow: 0 2px 10px rgba(254, 148, 0, 0.2); }
+
+.boton-verde {
+    background: linear-gradient(135deg, #00C853 0%, #00b34a 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+}
+.boton-verde:active { transform: scale(0.98); box-shadow: 0 2px 10px rgba(0, 200, 83, 0.2); }
+
+.boton-oscuro {
+    background-color: var(--accent-dark-btn);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-image: none;
+}
+.boton-oscuro:hover { background-color: #555; }
+.boton-oscuro:active { transform: scale(0.98); }
+
+/* --- NUEVO: Estilo para la caja de texto de pedir canciones --- */
+.input-texto {
+    width: 90%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+    outline: none;
+}
+.input-texto:focus {
+    border-color: var(--accent-orange);
+}
+
+.datos-wifi {
+    background-color: #1a1a1a;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.datos-wifi p strong { color: var(--accent-orange); }
+
+/* --- ESTILOS ESPECÍFICOS DE LA CARTA INTERACTIVA --- */
+.carta-body { padding-bottom: 40px; }
+
+.caja-alergenos {
+    background-color: var(--bg-card);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden; 
+}
+
+.caja-alergenos summary {
+    padding: 14px;
+    color: var(--accent-orange);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+.caja-alergenos summary::-webkit-details-marker { display: none; }
+
+.filtros-contenido {
+    padding: 0 14px 14px 14px;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px;
+}
+
+.etiqueta-filtro {
+    display: flex;
+    align-items: center;
+    background-color: var(--accent-dark-btn);
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.etiqueta-filtro input { display: none; }
+.etiqueta-filtro:has(input:checked) {
+    background-color: #E53935; /* Rojo alerta */
+    color: white;
+}
+
+.categorias-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    scrollbar-width: none; 
+}
+.categorias-scroll::-webkit-scrollbar { display: none; }
+
+.btn-categoria {
+    background-color: #1a1a1a;
+    color: #aaa;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn-categoria.activo {
+    background: linear-gradient(135deg, var(--accent-orange) 0%, #ffc163 100%);
+    color: #1a1a1a;
+    border: none;
+    box-shadow: 0 4px 10px rgba(254, 148, 0, 0.3);
+}
+
+.plato {
+    background-color: rgba(22, 23, 27, 0.8);
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.plato-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    gap: 10px;
+}
+.plato h3 { margin: 0; color: #fff; font-size: 16px; font-family: 'Poppins', sans-serif; line-height: 1.2;}
+.precio { color: var(--accent-green); font-weight: 700; font-size: 16px; font-family: 'Poppins', sans-serif;}
+.descripcion { color: #aaa; font-size: 13px; margin: 5px 0 10px 0; line-height: 1.4; }
+.alergenos-lista { color: #E53935; font-size: 11px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 5px;}
+.sin-alergenos { color: #888; font-size: 11px; }
+
+/* --- ESTILOS PARA LAS JAMS (Termómetro) --- */
+.caja-termometro {
+    background-color: rgba(22, 23, 27, 0.5);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+}
+
+.barra-fondo {
+    width: 100%;
+    height: 30px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    /* Efecto de sombra interior para que parezca hundido */
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.barra-relleno {
+    height: 100%;
+    width: 0%; /* Esto lo cambiaremos con JS */
+    /* Un degradado que va de verde a rojo para dar sensación de temperatura */
+    background: linear-gradient(90deg, var(--accent-green) 0%, var(--accent-orange) 50%, #E53935 100%);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Clase para desactivar el botón temporalmente (Anti-Spam) */
+.boton-bloqueado {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none; /* Evita que se pueda hacer clic */
+    background: #555 !important; /* Lo ponemos gris */
+    box-shadow: none !important;
+}

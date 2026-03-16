@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>La Voz de las Jams | El Parlamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="telegram.js"></script>
+<script src="app.js"></script> </body>
+
+<body>
+
+    <div class="contenedor" style="margin-top: 5vh;">
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <h1>🎸 La Voz de las Jams</h1>
+            <p class="subtitulo">Si el aplausómetro llega a la meta, ¡el pub invita a una ronda a la banda!</p>
+        </div>
+
+        <div class="caja-termometro">
+            <p id="texto-meta" style="font-weight: bold; margin-bottom: 10px; color: var(--text-gold);">Meta: 50 Votos</p>
+            
+            <div class="barra-fondo">
+                <div class="barra-relleno" id="barra-progreso"></div>
+            </div>
+            
+            <p id="contador-votos" style="font-size: 24px; font-weight: bold; margin-top: 10px;">0</p>
+        </div>
+
+        <div style="margin-top: 30px;">
+            <button id="btn-votar" class="boton boton-verde" onclick="registrarVoto()" style="padding: 20px; font-size: 18px;">
+                🔥 ¡DAR CAÑA!
+            </button>
+            <p id="mensaje-cooldown" style="color: var(--accent-orange); font-size: 12px; margin-top: 10px; height: 15px; opacity: 0; transition: opacity 0.3s;">
+                Recargando energía... espera unos segundos.
+            </p>
+        </div>
+
+        <a href="clientes.html" class="boton boton-oscuro" style="margin-top: 20px;">🔙 Volver a mi mesa</a>
+
+    </div>
+
+    <script src="jams.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Carta Interactiva | El Parlamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="carta-body">
+
+    <div class="contenedor" style="max-width: 450px; border: none; background: transparent; box-shadow: none; padding: 10px;">
+        
+        <div class="cabecera-carta" style="text-align: center; margin-bottom: 20px;">
+            <h1>📖 Nuestra Carta</h1>
+            <p class="subtitulo" style="margin-bottom: 10px;">Échale un ojo a lo que se cuece por aquí.</p>
+        </div>
+
+        <details class="caja-alergenos">
+            <summary>
+                <span>⚠️ Filtro de Alergias e Intolerancias</span>
+                <span>▼</span>
+            </summary>
+            <div class="filtros-contenido">
+                <label class="etiqueta-filtro"><input type="checkbox" value="Gluten" onchange="aplicarFiltros()">🌾 Gluten</label>
+                <label class="etiqueta-filtro"><input type="checkbox" value="Lactosa" onchange="aplicarFiltros()">🥛 Lactosa</label>
+                <label class="etiqueta-filtro"><input type="checkbox" value="FrutosSecos" onchange="aplicarFiltros()">🥜 Frutos Secos</label>
+                <label class="etiqueta-filtro"><input type="checkbox" value="Huevo" onchange="aplicarFiltros()">🥚 Huevo</label>
+            </div>
+        </details>
+
+        <div class="categorias-scroll" id="barra-categorias">
+            </div>
+
+        <div id="contenedor-carta">
+            </div>
+
+        <a href="clientes.html" class="boton boton-oscuro" style="margin-top: 30px;">🔙 Volver a mi mesa</a>
+    </div>
+
+    <script src="carta.js"></script>
+</body>
+</html>
