@@ -267,3 +267,13 @@ h3 span.icon { margin-right: 8px; font-size: 1.2em;}
     background: #555 !important; /* Lo ponemos gris */
     box-shadow: none !important;
 }
+
+.logo-parlamento {
+    width: 100%;
+    max-width: 280px; /* Controla el ancho máximo para móviles */
+    height: auto; /* Mantiene la proporción rectangular */
+    margin-bottom: 25px; /* Separa el logo del título */
+    display: block; /* Para centrarlo horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+}
