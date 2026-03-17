@@ -233,7 +233,8 @@ function enviarComandaTelegram() {
     }
 }
 
-window.onload = () => {
+// --- ARRANQUE ---
+document.addEventListener('DOMContentLoaded', () => {
     renderizarCategorias();
     mostrarPlatos();
-};
+});

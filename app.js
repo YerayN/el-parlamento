@@ -117,6 +117,6 @@ function copiarClaveWifi() {
 }
 
 // --- 4. ARRANQUE DEL SISTEMA ---
-window.onload = () => {
+document.addEventListener('DOMContentLoaded', () => {
     inicializarMesa();
-};
+});
